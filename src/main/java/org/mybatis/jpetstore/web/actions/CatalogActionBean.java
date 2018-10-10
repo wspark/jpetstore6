@@ -1,5 +1,5 @@
 /**
- *    Copyright 2010-2017 the original author or authors.
+ *    Copyright 2010-2018 the original author or authors.
  *
  *    Licensed under the Apache License, Version 2.0 (the "License");
  *    you may not use this file except in compliance with the License.
@@ -42,6 +42,7 @@ public class CatalogActionBean extends AbstractActionBean {
   private static final String VIEW_PRODUCT = "/WEB-INF/jsp/catalog/Product.jsp";
   private static final String VIEW_ITEM = "/WEB-INF/jsp/catalog/Item.jsp";
   private static final String SEARCH_PRODUCTS = "/WEB-INF/jsp/catalog/SearchProducts.jsp";
+  private static final String DELAY_THREADS = "/WEB-INF/jsp/catalog/DelayThreads.jsp";  
 
   @SpringBean
   private transient CatalogService catalogService;
@@ -181,6 +182,18 @@ public class CatalogActionBean extends AbstractActionBean {
     product = item.getProduct();
     return new ForwardResolution(VIEW_ITEM);
   }
+  
+  /**
+   * Delay Threads.
+   *
+   * @return the forward resolution
+   */
+  public ForwardResolution delayThread() {
+//    item = catalogService.getItem(itemId);
+//    product = item.getProduct();
+    return new ForwardResolution(DELAY_THREADS);
+  }  
+ 
 
   /**
    * Search products.

@@ -124,8 +124,18 @@
 	event="viewCategory">
 	<stripes:param name="categoryId" value="BIRDS" />
 	<img src="../images/sm_birds.gif" />
-</stripes:link></div>
-
+</stripes:link>
+<!-- delay threads -->
+    <img src="../images/separator.gif" /><stripes:link
+	beanclass="org.mybatis.jpetstore.web.actions.CatalogActionBean"
+	event="delayThread">
+	<stripes:param name="categoryId" value="Delay_Threads" />
+	<img src="../images/sm_birds.gif" />
+</stripes:link>
+<!-- dbconn.html  -->
+    <img src="../images/separator.gif" />
+<a href="../dbconn.html">dbconn.html</a>
+	</div>
 </div>
 
 <div id="Content"><stripes:messages />
